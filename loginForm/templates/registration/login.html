@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="forms">
+    <h2>Log In</h2>
+    <p>Thankyou for loging into this page,we hope to satisfy whatever thirst brought you here.We are all about love and light.</p>
+
+    <form method="POST">
+{% csrf_token%}
+{{form.as_p}}
+<button type="submit">Log In</button>
+
+    </form>
+    </div>
+
+<style>
+.forms{
+    height: 600px;
+    width: 400px;
+    background-color: grey;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+body{
+    padding: 50px;
+}
+input{
+    width: 200px;
+    height: 30px;
+    border-radius: 3px;
+}
+h2{
+    color: darkblue;
+}
+button{
+
+color: darkgoldenrod;
+background-color: darkslateblue;
+}
+
+
+</style>
+    
+</body>
+</html>

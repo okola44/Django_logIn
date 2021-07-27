@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="login">
+    {% block content%}  
+    {% if user.is_authenticated %}
+    <h2>Welcome,{{user.username}} !</h2>
+    <a href="{% url 'logout' %}"> Log Out</a>
+    {% else %}
+    <h2>You are not logged in</h2>
+<a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+    {% endblock %}
+</div>
+
+<style>
+.login{
+    background-color: chocolate;
+    height: 300px;
+    width: 500px;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+body{
+    /* background-color: aquamarine; */
+    align-items: center;
+    padding: 50px;
+
+}
+h2{
+    color: rgb(44, 188, 224);
+    padding-top: 20px;
+}
+
+
+
+
+</style>
+</body>
+</html>
